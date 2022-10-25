@@ -1,3 +1,7 @@
+// leetcode
+// difficult: medium
+// type: dfs
+// https://leetcode.com/problems/find-all-groups-of-farmland/
 
 /**
  * @param {number[][]} land
