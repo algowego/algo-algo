@@ -45,3 +45,29 @@ const reorderList = function(head) {
   
   node.next = null;
 };
+
+// 프로그래머스
+// level: 1
+// type: stack
+// https://school.programmers.co.kr/learn/courses/30/lessons/133502?language=javascript
+
+function solution(ingredient) {
+    const list = [];
+    const hamberger = '1231';
+    let count = 0;
+    
+    ingredient.forEach((ing, idx)=>{
+        list.push(ing);  
+       
+        if(list.length >= 4){
+            const result = list.slice(-4).join('');
+            
+            if(result === hamberger){
+                list.splice(list.length - 4, 4);   
+                count += 1;
+            }
+        } 
+    })
+    
+    return count;
+}
